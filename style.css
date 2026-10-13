@@ -1371,7 +1371,11 @@ textarea {
 }
 
 
-
+/* =====================================================
+   REFINED ARTIST HOMEPAGE — 2026
+   The hero composition leaves the right side for typography
+   and shifts the background subject slightly to the left.
+===================================================== */
 
 :root {
     --cream: #f4f0e8;
@@ -1520,7 +1524,7 @@ textarea {
     to { opacity: 1; transform: translateY(0); }
 }
 
-
+/* Give the biography more room for the complete four-language texts. */
 .biography-grid {
     grid-template-columns: minmax(260px, 350px) minmax(0, 1fr);
     gap: clamp(42px, 6vw, 90px);
@@ -1540,7 +1544,7 @@ textarea {
     letter-spacing: 1.1px;
 }
 
-
+/* Keep the image-led hero intentional on tablets and phones. */
 @media (max-width: 800px) {
     .site-header {
         height: 70px;
@@ -1648,7 +1652,7 @@ textarea {
 
 
 
-
+/* Final focused refinements: cleaner cover and clearer concert dates. */
 .home-content {
     width: min(440px, 40vw);
 }
@@ -1709,7 +1713,8 @@ textarea {
 }
 
 
-
+/* Focused refinements based on the approved homepage design. */
+/* Keep Works higher on the page without changing its visual style. */
 .works-section {
     padding-top: 58px;
     padding-bottom: 70px;
@@ -1724,7 +1729,7 @@ textarea {
     margin-bottom: 42px;
 }
 
-
+/* Give work titles a consistent baseline and balanced line spacing. */
 .work-item {
     display: flex;
     flex-direction: column;
@@ -1739,6 +1744,7 @@ textarea {
     text-wrap: pretty;
 }
 
+/* Keep event numerals visually even where they share a line. */
 .event-date strong,
 .event-date span {
     font-variant-numeric: lining-nums tabular-nums;
@@ -1765,7 +1771,7 @@ textarea {
 }
 
 
-
+/* Focused fixes requested: visibly shift the hero portrait left and align contact numerals. */
 .home-section .section-background {
     overflow: hidden;
 }
@@ -1795,7 +1801,7 @@ textarea {
 }
 
 
-
+/* Final refinement: move the portrait further left, open up the name, and polish contact typography. */
 .home-section .section-background img {
     width: 118%;
     max-width: none;
@@ -1862,7 +1868,7 @@ textarea {
 }
 
 
-
+/* Final typography correction: elegant, aligned contact details and consistent section heading sizes. */
 .contact-information > div {
     display: grid;
     grid-template-columns: 1fr;
@@ -1892,7 +1898,7 @@ textarea {
     overflow-wrap: anywhere;
 }
 
-
+/* Match Works heading to the same scale as Biography, Concerts & Events, and Contact. */
 .works-section .section-title h2 {
     font-size: clamp(50px, 7vw, 90px);
     line-height: 1;
@@ -1920,7 +1926,7 @@ textarea {
 }
 
 
-
+/* Requested adjustments: stronger left shift and clearly visible spacing between Jing and Tang. */
 .home-section .section-background img {
     transform: translateX(-15%);
 }
@@ -1954,7 +1960,7 @@ textarea {
 }
 
 
-
+/* Latest requested refinement: widen the name's letter spacing and align Works heading position. */
 .home-content h1 {
     letter-spacing: 0.055em;
 }
@@ -1982,7 +1988,7 @@ textarea {
 }
 
 
-
+/* Latest adjustment: align Works heading with the shared section-inner left edge. */
 .works-section {
     padding-left: 0;
     padding-right: 0;
@@ -2001,7 +2007,7 @@ textarea {
 }
 
 
-
+/* Scheme 3 — refined layout: keep the title in the darker left side, away from the portrait. */
 .home-content {
     width: min(620px, 48vw);
     text-align: left;
@@ -2099,6 +2105,7 @@ textarea {
 }
 
 
+/* Final harmony pass: keep the title in the quiet left side and the link at the bottom. */
 .home-section {
     position: relative;
     justify-content: flex-start;
@@ -2225,7 +2232,8 @@ textarea {
     }
 }
 
-
+/* Requested minimal adjustment: move the hero text block to the right;
+   keep MORE INFORMATION at the bottom edge of the homepage. Background image rules remain unchanged. */
 .home-section {
     justify-content: flex-end;
     align-items: center;
@@ -2276,7 +2284,7 @@ textarea {
 }
 
 
-
+/* Final requested changes: move the dark overlay to the right without moving hero text. */
 .home-section .dark-overlay {
     background: linear-gradient(90deg,
         rgba(13, 12, 11, 0.04) 0%,
@@ -2285,7 +2293,7 @@ textarea {
         rgba(13, 12, 11, 0.68) 100%);
 }
 
-
+/* Contact form confirmation */
 .contact-form .form-status {
     margin-top: 16px;
     color: rgba(255, 250, 241, 0.9);
@@ -2314,12 +2322,11 @@ textarea {
 }
 
 
-
-.home-section .hero-link {
+/* Final requested fix: anchor MORE INFORMATION to the bottom of the homepage section. */
+.home-section > .hero-link {
     position: absolute;
-    left: 50%;
+    right: clamp(28px, 10.5vw, 170px);
     bottom: 34px;
-    transform: translateX(-50%);
     margin-top: 0;
     z-index: 4;
 }
@@ -2335,5 +2342,272 @@ textarea {
     .home-section > .hero-link {
         right: 20px;
         bottom: 24px;
+    }
+}
+
+
+/* Mobile-specific refinements requested: center the portrait and hero title,
+   and reduce the header/navigation footprint on narrow screens only. */
+@media (max-width: 500px) {
+    .home-section .section-background img {
+        /* Shift the portrait toward the center of the phone viewport. */
+        transform: translateX(0);
+    }
+
+    .home-content {
+        /* Nudge the name block inward without changing its typography. */
+        margin-left: 12vw !important;
+        margin-right: 0 !important;
+        width: calc(100% - 12vw) !important;
+    }
+
+    .site-header {
+        padding-left: 12px;
+        padding-right: 12px;
+        gap: 8px;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+        font-size: 7px;
+        letter-spacing: 1px;
+        white-space: nowrap;
+    }
+
+    .main-nav {
+        flex: 1 1 auto;
+        justify-content: flex-end;
+        gap: clamp(5px, 1.6vw, 8px);
+        min-width: 0;
+    }
+
+    .main-nav a {
+        font-size: 5.5px;
+        letter-spacing: 0.35px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-content {
+        margin-left: 9vw !important;
+        width: calc(100% - 9vw) !important;
+    }
+
+    .site-header {
+        padding-left: 9px;
+        padding-right: 9px;
+        gap: 5px;
+    }
+
+    .logo {
+        font-size: 6.5px;
+        letter-spacing: 0.7px;
+    }
+
+    .main-nav {
+        gap: 5px;
+    }
+
+    .main-nav a {
+        font-size: 5px;
+        letter-spacing: 0.2px;
+    }
+}
+
+/* Mobile-only composition refinements requested on 2026-10-14.
+   Desktop styles remain unchanged. */
+@media (max-width: 600px) {
+    /* Homepage: keep the portrait in view and center the name block. */
+    .home-section .section-background img {
+        object-position: 34% center !important;
+        transform: none !important;
+    }
+
+    .home-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .home-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        transform: translateY(-1vh) !important;
+    }
+
+    .home-content h1.hero-name {
+        width: 100%;
+        text-align: center !important;
+        font-size: clamp(30px, 8.2vw, 38px) !important;
+        letter-spacing: 0.075em !important;
+        padding-left: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .home-content .hero-rule {
+        margin: 16px auto 13px !important;
+    }
+
+    .home-content .hero-subtitle {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        font-size: 7px !important;
+        letter-spacing: 0.11em !important;
+        text-align: center !important;
+    }
+
+    .home-section > .hero-link {
+        right: 50% !important;
+        left: auto !important;
+        transform: translateX(50%);
+        bottom: 22px !important;
+        white-space: nowrap;
+        font-size: 7px !important;
+        letter-spacing: 0.1em !important;
+    }
+
+    /* Compact the header so the logo and navigation no longer dominate. */
+    .site-header {
+        height: auto !important;
+        min-height: 58px;
+        padding: 14px 12px 10px !important;
+        gap: 10px !important;
+        align-items: center !important;
+    }
+
+    .logo {
+        font-size: 7px !important;
+        letter-spacing: 1.1px !important;
+    }
+
+    .main-nav {
+        flex: 1 1 auto !important;
+        min-width: 0;
+        justify-content: flex-end !important;
+        gap: clamp(5px, 1.5vw, 8px) !important;
+    }
+
+    .main-nav a {
+        font-size: clamp(5px, 1.45vw, 6.5px) !important;
+        letter-spacing: 0.25px !important;
+        padding-bottom: 3px !important;
+        white-space: nowrap;
+    }
+
+    /* Concerts & Events: stack date, image and event details on phones. */
+    .termine-section .section-inner {
+        width: calc(100% - 36px) !important;
+        padding-top: 78px !important;
+        padding-bottom: 54px !important;
+    }
+
+    .termine-section .section-title {
+        margin-bottom: 28px !important;
+    }
+
+    .termine-section .section-title h2 {
+        font-size: clamp(34px, 10vw, 44px) !important;
+        line-height: 1.05;
+    }
+
+    .termine-section .event {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        min-height: 0 !important;
+        padding-bottom: 28px;
+    }
+
+    .termine-section .event-date {
+        align-items: baseline !important;
+        gap: 8px !important;
+        margin-bottom: 2px;
+    }
+
+    .termine-section .event-date strong {
+        font-size: 30px !important;
+    }
+
+    .termine-section .event-date span {
+        padding-top: 0 !important;
+        font-size: 8px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .termine-section .timeline-line {
+        display: none !important;
+    }
+
+    .termine-section .event-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        padding-bottom: 0 !important;
+        min-width: 0;
+    }
+
+    .termine-section .event-content img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 175px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .termine-section .event-info {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .termine-section .event-info small {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .termine-section .event-info h3 {
+        font-size: 21px !important;
+        line-height: 1.25 !important;
+        margin: 8px 0 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .termine-section .event-info p {
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 5px 0;
+    }
+
+    /* Contact: reframe the same background photo around the person. */
+    .contact-background img {
+        object-position: 34% center !important;
+        object-fit: cover !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .site-header {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        gap: 6px !important;
+    }
+
+    .logo {
+        font-size: 6px !important;
+        letter-spacing: 0.7px !important;
+    }
+
+    .main-nav {
+        gap: 4px !important;
+    }
+
+    .main-nav a {
+        font-size: 4.8px !important;
+        letter-spacing: 0.1px !important;
+    }
+
+    .termine-section .event-info h3 {
+        font-size: 19px !important;
     }
 }
