@@ -1,3 +1,9 @@
+/* Jing Tang — website interactions
+   Works with the existing HTML structure:
+   - Biography language buttons: data-language="english/german/chinese/russian"
+   - Biography text sections: .bio-text with matching IDs
+   - Smooth in-page navigation
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
     // Biography language switcher
@@ -72,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Smooth scrolling for links to sections on this page.
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener("click", (event) => {
             const hash = link.getAttribute("href");
