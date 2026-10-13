@@ -2611,3 +2611,52 @@ textarea {
         font-size: 19px !important;
     }
 }
+
+/* Final mobile-only refinements requested on 2026-10-14.
+   Desktop styles and all other page content remain unchanged. */
+@media (max-width: 800px) {
+    /* Remove the dark overlay from the homepage photo on mobile only. */
+    .home-section > .dark-overlay {
+        opacity: 0 !important;
+        background: none !important;
+    }
+
+    /* Turn the MORE INFORMATION arrow downward on mobile only. */
+    .home-section > .hero-link span {
+        display: inline-block !important;
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+
+    /* Show the event date as one clean horizontal line on mobile. */
+    .termine-section .event-date {
+        display: block !important;
+        white-space: nowrap !important;
+        margin-bottom: 2px !important;
+    }
+
+    .termine-section .event-date strong,
+    .termine-section .event-date span {
+        display: none !important;
+    }
+
+    .termine-section .event-date::after {
+        content: "Dec 11 2026";
+        display: inline-block;
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        line-height: 1.4;
+    }
+
+    /* Display the full event image instead of cropping its edges. */
+    .termine-section .event-content img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+}
