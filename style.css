@@ -799,6 +799,23 @@ textarea {
 }
 
 
+/* Reserved image slots for the three newly added Termine events. */
+.event-image-placeholder {
+    width: 300px;
+    height: 200px;
+    flex: 0 0 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #bdb4a9;
+    background: rgba(139, 131, 121, 0.06);
+    color: #8b8379;
+    font-size: 10px;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+}
+
+
 .event-info {
 
     padding-top: 3px;
@@ -1868,7 +1885,7 @@ textarea {
 }
 
 
-/* Final typography correction: elegant, aligned contact details and consistent section heading sizes. */
+
 .contact-information > div {
     display: grid;
     grid-template-columns: 1fr;
@@ -1898,7 +1915,7 @@ textarea {
     overflow-wrap: anywhere;
 }
 
-/* Match Works heading to the same scale as Biography, Concerts & Events, and Contact. */
+
 .works-section .section-title h2 {
     font-size: clamp(50px, 7vw, 90px);
     line-height: 1;
@@ -1926,7 +1943,7 @@ textarea {
 }
 
 
-/* Requested adjustments: stronger left shift and clearly visible spacing between Jing and Tang. */
+
 .home-section .section-background img {
     transform: translateX(-15%);
 }
@@ -1988,7 +2005,7 @@ textarea {
 }
 
 
-/* Latest adjustment: align Works heading with the shared section-inner left edge. */
+
 .works-section {
     padding-left: 0;
     padding-right: 0;
@@ -2007,7 +2024,6 @@ textarea {
 }
 
 
-/* Scheme 3 — refined layout: keep the title in the darker left side, away from the portrait. */
 .home-content {
     width: min(620px, 48vw);
     text-align: left;
@@ -2105,7 +2121,7 @@ textarea {
 }
 
 
-/* Final harmony pass: keep the title in the quiet left side and the link at the bottom. */
+
 .home-section {
     position: relative;
     justify-content: flex-start;
@@ -2232,8 +2248,7 @@ textarea {
     }
 }
 
-/* Requested minimal adjustment: move the hero text block to the right;
-   keep MORE INFORMATION at the bottom edge of the homepage. Background image rules remain unchanged. */
+
 .home-section {
     justify-content: flex-end;
     align-items: center;
@@ -2322,7 +2337,7 @@ textarea {
 }
 
 
-/* Final requested fix: anchor MORE INFORMATION to the bottom of the homepage section. */
+
 .home-section > .hero-link {
     position: absolute;
     right: clamp(28px, 10.5vw, 170px);
@@ -2346,8 +2361,7 @@ textarea {
 }
 
 
-/* Mobile-specific refinements requested: center the portrait and hero title,
-   and reduce the header/navigation footprint on narrow screens only. */
+
 @media (max-width: 500px) {
     .home-section .section-background img {
         /* Shift the portrait toward the center of the phone viewport. */
@@ -2355,7 +2369,7 @@ textarea {
     }
 
     .home-content {
-        /* Nudge the name block inward without changing its typography. */
+        
         margin-left: 12vw !important;
         margin-right: 0 !important;
         width: calc(100% - 12vw) !important;
@@ -2556,6 +2570,13 @@ textarea {
         object-position: center !important;
     }
 
+    .termine-section .event-image-placeholder {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 3 / 2;
+        flex: none !important;
+    }
+
     .termine-section .event-info {
         min-width: 0;
         overflow-wrap: anywhere;
@@ -2641,7 +2662,7 @@ textarea {
     }
 
     .termine-section .event-date::after {
-        content: "Dec 11 2026";
+        content: attr(data-date);
         display: inline-block;
         font-family: Inter, sans-serif;
         font-size: 12px;
